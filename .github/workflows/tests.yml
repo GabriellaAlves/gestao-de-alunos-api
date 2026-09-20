@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-services:
+    services:
       mongodb:
         image: mongo:4.4
         ports:
@@ -21,7 +21,8 @@ services:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-steps:
+
+    steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
